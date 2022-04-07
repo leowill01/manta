@@ -39,3 +39,5 @@ tags
 # directory for visual studio auxiliary project info created for the new VS 'build-from-cmake' option:
 /.vs
 
+docs/userGuide/README.log
+README.log
