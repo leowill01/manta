@@ -1,3 +1,43 @@
+---
+title: 'Manta Structural Variant Caller'
+subtitle: '(Document from [Manta GitHub repository](https://github.com/Illumina/manta))'
+date: '2021 12_Dec 02'
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    pandoc_args:
+    - "--listings"
+  
+header-includes:
+# wrap code blocks using the listings package (run with pandoc command that includes `--listings` command). looks cleaner. but makes highlighting mistakes, e.g. mistakes any '#' symbol as the start of a comment
+- \usepackage{fontspec}
+- \setmainfont{Optima}
+- \usepackage[fontsize=14pt]{scrextend}
+- \usepackage{xcolor}
+- \lstset{breaklines=true}
+- \lstset{language=[Motorola68k]Assembler}
+- \lstset{basicstyle=\small\ttfamily}
+- \lstset{extendedchars=true}
+- \lstset{tabsize=2}
+- \lstset{columns=fixed}
+- \lstset{showstringspaces=false}
+- \lstset{frame=trbl}
+- \lstset{frameround=tttt}
+- \lstset{framesep=4pt}
+- \lstset{numbers=left}
+- \lstset{numberstyle=\tiny\ttfamily}
+- \lstset{postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}}
+- \lstset{commentstyle=\color{red!50!black}}
+- \lstset{keywordstyle=\color{blue!70!black}}
+- \lstset{stringstyle=\color{green!50!black}}
+# prevent floating figures (insert them where they are in the .md file)
+- \usepackage{float}
+- \let\origfigure\figure
+- \let\endorigfigure\endfigure
+- \renewenvironment{figure}[1][2] {\expandafter\origfigure\expandafter[H]}{\endorigfigure}
+
+---
+
 Manta Structural Variant Caller
 ===============================
 
